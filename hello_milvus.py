@@ -5,7 +5,7 @@ import random
 # Function to initialize Milvus Client and set up the database
 def initialize_milvus():
     # Connect to the Milvus server
-    connections.connect("default", host="127.0.0.1", port="19530")
+    connections.connect("default", host="34.81.214.153", port="19530")
     
     # Create a local Milvus vector database
     client = MilvusClient("milvus_demo.db")
