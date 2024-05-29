@@ -1,9 +1,12 @@
-from pymilvus import MilvusClient, FieldSchema, CollectionSchema, DataType, Collection, model
+from pymilvus import connections, MilvusClient, FieldSchema, CollectionSchema, DataType, Collection, model
 import numpy as np
 import random
 
 # Function to initialize Milvus Client and set up the database
 def initialize_milvus():
+    # Connect to the Milvus server
+    connections.connect("default", host="127.0.0.1", port="19530")
+    
     # Create a local Milvus vector database
     client = MilvusClient("milvus_demo.db")
 
